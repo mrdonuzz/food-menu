@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+.container{
+    width: 100%;
+}
+
+.banner--menu{
+    background-image: url(./images/meat-1155132_1920.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 22.5vh;
+}
+
+.banner--menu h1{
+    color: white;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.menu--list{
+    display: grid;
+    grid-template-areas: "menu1 menu2"
+                         "menu3 menu4"
+                         "menu5 menu6";
+    grid-template-columns: repeat(2, 50rem);
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: center;
+    padding-top: 3rem;
+    background-color: #171718;
+    min-height: 77.5vh;
+    grid-gap: 1rem;
+}
+
+.menu--item{
+    padding: 3%;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.menu--item img{
+    width: 12.8rem;
+    height: 12.8rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.menu--text{
+    margin-left: 1.5rem;
+    width: 100%;
+}
+
+.menu--text h1{
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.menu--text p:nth-child(2){
+    font-size: 1.5rem;
+}
+
+.menu--item p:last-child{
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: rgb(255, 62, 62);
+    text-align: right;
+    margin-top: 2rem;
+}
+
+@media screen and (max-width: 960px) {
+    .menu--list{
+        grid-template-areas: "menu1"
+                             "menu2"
+                             "menu3"
+                             "menu4"
+                             "menu5"
+                             "menu6";
+        grid-template-columns: 50rem;
+        grid-template-rows: repeat(6, 1fr);
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .menu--list{
+        grid-template-columns: 37.5rem;
+    }
+}
